@@ -44,7 +44,8 @@
 
 ## วิธีใช้งาน
 
-```python main.py
+```
+python main.py
 ```
 
 ---
