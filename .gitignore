@@ -1,0 +1,17 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment
+.env
+venv/
+myenv/
+
+# FAISS index (ไม่ต้อง push ขึ้น git)
+faiss_index/
+
+# Logs
+*.log
+
+# System
+.DS_Store
