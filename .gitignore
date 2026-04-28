@@ -7,7 +7,7 @@ __pycache__/
 venv/
 myenv/
 
-# FAISS index (ไม่ต้อง push ขึ้น git)
+# FAISS index 
 faiss_index/
 
 # Logs
