@@ -1,14 +1,15 @@
-from loader import load_document
-from splitter import split_documents
-from vectorstore import create_vector_store, save_vector_store
+import tkinter as tk
 
-docs = load_document()
-all_splits = split_documents(docs)
-vector_store = create_vector_store(all_splits)
+def say_hello():
+    label.config(text="Hello!")
 
-if vector_store:
-    print("SUCCESS: Vector store created")
-    save_vector_store(vector_store)
-    print("SUCCESS: Vector store saved")
-else:
-    print("FAILED: Vector store is None")
+root = tk.Tk()
+root.title("My App")
+
+label = tk.Label(root, text="กดปุ่มสิ")
+label.pack()
+
+button = tk.Button(root, text="Click me", command=say_hello)
+button.pack()
+
+root.mainloop()

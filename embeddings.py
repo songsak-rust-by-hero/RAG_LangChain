@@ -8,6 +8,8 @@ def get_embeddings():
     สร้างและคืนค่าอ็อบเจกต์ HuggingFaceEmbeddings ที่ตั้งค่าด้วยชื่อโมเดลที่กำหนด
     """
     embeddings = HuggingFaceEmbeddings(
-        model_name=EMBEDDING_MODEL # กำหนดชื่อโมเดล Embedding ที่จะใช้
+        model_name=EMBEDDING_MODEL, # กำหนดชื่อโมเดล Embedding ที่จะใช้
+        model_kwargs={"device": "cpu"},
+        encode_kwargs={"batch_size": 32}
     )
     return embeddings # คืนค่าอ็อบเจกต์ Embeddings

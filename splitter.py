@@ -21,7 +21,8 @@ def split_documents(docs: List[Document]) -> List[Document]:
         chunk_size=CHUNK_SIZE, # ขนาดอักษรต่อ chunk
         chunk_overlap=CHUNK_OVERLAP, # ระยะทับซ้อนเพื่อกันเนื้อหาขาดตอน
         add_start_index=ADD_START_INDEX, # เก็บตำแหน่งเริ่มต้นใน text ต้นฉบับ
-    )
+        separators=["\n\n","\n"," ",""], # ตัดข้อความในเอกสาร
+            )
     all_splits = text_splitter.split_documents(docs) # ทำการแบ่งเอกสารออกเป็นส่วนย่อยๆ
     logger.info(f"Split into {len(all_splits)} sub-documents.") # บันทึกข้อมูลจำนวนเอกสารย่อยที่ได้
     return all_splits # คืนค่าลิสต์ของเอกสารย่อยทั้งหมด
